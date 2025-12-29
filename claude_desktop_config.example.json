@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "trendradar-research-cabal": {
+      "command": "python3",
+      "args": [
+        "-m",
+        "mcp_server.server",
+        "--transport",
+        "stdio",
+        "--project-root",
+        "/ABSOLUTE/PATH/TO/international_model_observatory"
+      ],
+      "env": {}
+    }
+  }
+}
