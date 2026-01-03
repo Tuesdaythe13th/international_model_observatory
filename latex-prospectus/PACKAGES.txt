@@ -1,0 +1,127 @@
+LaTeX Packages Required for Neural Forensics Prospectus
+========================================================
+
+This file lists all LaTeX packages used in neural_forensics_prospectus.tex
+with their purpose and source.
+
+CORE PACKAGES
+-------------
+inputenc        UTF-8 input encoding
+fontenc         T1 font encoding for proper font rendering
+mathpazo        Palatino font (body text and math)
+helvet          Helvetica font (headings)
+microtype       Microtypographic improvements (kerning, tracking)
+geometry        Page layout and margin control
+parskip         Paragraph spacing without indentation
+
+COLOR & GRAPHICS
+----------------
+xcolor          Color definitions and support (with 'table' option)
+tcolorbox       Colored boxes and frames (requires pgf)
+pgf             Portable Graphics Format (backend for tcolorbox)
+graphicx        Image inclusion (\includegraphics)
+wrapfig         Wrap text around figures
+caption         Figure/table caption customization
+float           Enhanced float placement (H specifier)
+subcaption      Subfigures and subcaptions
+
+CODE LISTINGS
+-------------
+listings        Syntax-highlighted code blocks
+
+DOCUMENT STRUCTURE
+------------------
+titlesec        Section heading formatting
+enumitem        List customization (itemize, enumerate)
+booktabs        Professional quality tables (\toprule, \midrule, \bottomrule)
+tabularx        Auto-sizing table columns
+
+MATHEMATICS
+-----------
+amsmath         AMS mathematical environments (align, equation, etc.)
+amssymb         AMS mathematical symbols
+amsfonts        AMS mathematical fonts
+
+HYPERLINKS
+----------
+hyperref        PDF hyperlinks, metadata, and cross-references
+url             URL formatting (auto-loaded by hyperref)
+
+AUXILIARY (tcolorbox dependencies)
+----------------------------------
+etoolbox        Programming tools for LaTeX
+environ         Environment definitions
+
+INSTALLATION METHODS
+====================
+
+Method 1: Full TeX Live Installation (Recommended)
+---------------------------------------------------
+# Ubuntu/Debian
+sudo apt-get install texlive-full
+
+# macOS
+brew install --cask mactex
+
+# This installs all packages; no additional setup needed
+
+
+Method 2: Minimal Installation + Individual Packages
+-----------------------------------------------------
+# Ubuntu/Debian - Minimal base
+sudo apt-get install texlive texlive-latex-extra texlive-fonts-recommended
+
+# Then install specific collections
+sudo tlmgr install \
+    collection-latexrecommended \
+    collection-fontsrecommended \
+    collection-mathscience
+
+
+Method 3: Package-by-Package (Automated)
+-----------------------------------------
+# Use the provided script
+./install-latex-packages.sh
+
+
+Method 4: Manual tlmgr
+----------------------
+sudo tlmgr update --self
+sudo tlmgr install \
+    mathpazo helvet microtype geometry parskip \
+    xcolor tcolorbox pgf graphicx wrapfig \
+    caption float subcaption listings titlesec \
+    enumitem booktabs tabularx amsmath amssymb \
+    hyperref etoolbox environ
+
+
+PACKAGE SOURCES
+===============
+
+Most packages come from CTAN (Comprehensive TeX Archive Network):
+https://ctan.org/
+
+Individual package documentation:
+- tcolorbox: https://ctan.org/pkg/tcolorbox
+- listings: https://ctan.org/pkg/listings
+- hyperref: https://ctan.org/pkg/hyperref
+- mathpazo: https://ctan.org/pkg/mathpazo (part of psnfss)
+
+
+TROUBLESHOOTING
+===============
+
+Missing .sty file error:
+1. Identify package name from error (e.g., "tcolorbox.sty" → package "tcolorbox")
+2. Install: sudo tlmgr install <package-name>
+3. Rebuild: make cleanall && make
+
+Font warnings:
+- Install: sudo tlmgr install collection-fontsrecommended
+
+tlmgr permission denied:
+- Run with sudo, or configure tlmgr user mode:
+  tlmgr init-usertree
+
+Package version conflicts:
+- Update all packages: sudo tlmgr update --all

@@ -1,0 +1,36 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.idx
+*.ilg
+*.ind
+*.nav
+*.snm
+*.vrb
+
+# Build directory
+build/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+*~
+
+# Editor backups
+*.swp
+*.swo
+*.bak
+
+# PDF output (comment out if you want to track PDFs)
+# *.pdf
