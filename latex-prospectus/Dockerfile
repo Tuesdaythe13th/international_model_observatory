@@ -19,6 +19,7 @@ RUN tlmgr update --self && \
     microtype \
     geometry \
     parskip \
+    fancyhdr \
     xcolor \
     tcolorbox \
     pgf \
@@ -34,6 +35,7 @@ RUN tlmgr update --self && \
     tabularx \
     amsmath \
     amssymb \
+    amsthm \
     hyperref \
     etoolbox \
     environ

@@ -58,6 +58,7 @@ PACKAGES=(
     # Page layout
     "geometry"
     "parskip"
+    "fancyhdr"          # Headers and footers
 
     # Colors and graphics
     "xcolor"
@@ -83,6 +84,7 @@ PACKAGES=(
     "amsmath"
     "amssymb"
     "amsfonts"
+    "amsthm"            # Theorem environments
 
     # Hyperlinks
     "hyperref"

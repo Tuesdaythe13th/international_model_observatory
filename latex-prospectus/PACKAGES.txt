@@ -13,6 +13,7 @@ helvet          Helvetica font (headings)
 microtype       Microtypographic improvements (kerning, tracking)
 geometry        Page layout and margin control
 parskip         Paragraph spacing without indentation
+fancyhdr        Custom headers and footers
 
 COLOR & GRAPHICS
 ----------------
@@ -41,6 +42,7 @@ MATHEMATICS
 amsmath         AMS mathematical environments (align, equation, etc.)
 amssymb         AMS mathematical symbols
 amsfonts        AMS mathematical fonts
+amsthm          AMS theorem environments (theorem, lemma, proof, etc.)
 
 HYPERLINKS
 ----------
@@ -88,10 +90,10 @@ Method 4: Manual tlmgr
 ----------------------
 sudo tlmgr update --self
 sudo tlmgr install \
-    mathpazo helvet microtype geometry parskip \
+    mathpazo helvet microtype geometry parskip fancyhdr \
     xcolor tcolorbox pgf graphicx wrapfig \
     caption float subcaption listings titlesec \
-    enumitem booktabs tabularx amsmath amssymb \
+    enumitem booktabs tabularx amsmath amssymb amsthm \
     hyperref etoolbox environ
 
 

@@ -76,6 +76,19 @@ make watch
 make view
 ```
 
+## Document Features
+
+The enhanced prospectus includes:
+
+- **Professional Title Page** with abstract box and hero image
+- **Table of Contents** for easy navigation
+- **Custom Headers/Footers** showing document title and page numbers
+- **Executive Summary** with integrated figures
+- **Forensic Evidence Dossier** with JSON and Python code examples
+- **Complete Methodology** with implementation code
+- **8-Week Research Roadmap** with detailed deliverables table
+- **Technical Considerations** section
+
 ## Required LaTeX Packages
 
 The prospectus uses the following LaTeX packages:
@@ -90,6 +103,7 @@ The prospectus uses the following LaTeX packages:
 ### Layout
 - `geometry` - Page margins and layout
 - `parskip` - Paragraph spacing
+- `fancyhdr` - Custom headers and footers
 
 ### Graphics & Colors
 - `xcolor` - Color support
@@ -109,7 +123,7 @@ The prospectus uses the following LaTeX packages:
 - `tabularx` - Advanced table layouts
 
 ### Mathematics
-- `amsmath`, `amssymb` - AMS math symbols and environments
+- `amsmath`, `amssymb`, `amsthm` - AMS math symbols and theorem environments
 
 ### Hyperlinks
 - `hyperref` - PDF hyperlinks and metadata
@@ -149,6 +163,14 @@ sudo tlmgr install collection-fontsrecommended
 sudo tlmgr install mathpazo psnfss helvetic
 ```
 
+### Headers/Footers Not Appearing
+
+The document uses `fancyhdr` for custom headers and footers. If they don't appear:
+
+```bash
+sudo tlmgr install fancyhdr
+```
+
 ### Image Not Found
 
 Ensure all image files are in the `images/` directory and have `.png` extension.
@@ -169,22 +191,34 @@ chmod +x install-latex-packages.sh
 
 ```
 neural_forensics_prospectus.tex
-├── Preamble (packages, styling, colors)
-├── Title and Metadata
+├── Preamble (packages, styling, colors, custom headers)
+├── Title Page
+│   ├── Hero Image
+│   ├── Title & Subtitle
+│   ├── Metadata (Applicant, Mentor, Stream, Date)
+│   └── Abstract Box
+├── Keywords & Faithfulness Figure
+├── Table of Contents
 ├── Executive Summary
-│   ├── Problem Statement
-│   ├── High-level Takeaways
-│   ├── Key Experiments
-│   ├── H-Score Metric
-│   └── Strategic Fit
-├── Main Content
-│   ├── 1. Faithfulness Crisis
-│   ├── 2. Specimen cb83
-│   ├── 3. Methodology & ADT
-│   ├── 4. Taxonomy (DSMMD v1.0)
-│   ├── 5. Research Plan
-│   └── 6. Appendix: Decoupling Gradient
-└── End
+│   ├── Core Problem
+│   ├── Press Secretary Hypothesis
+│   ├── Safety Implications
+│   ├── ADT Overview
+│   └── H-Score Metric
+├── Forensic Evidence Dossier
+│   ├── Methodological Approach
+│   ├── Specimen cb83 (Sediment Anomaly)
+│   └── Architectural Privilege Tokens
+├── Methodology: Neural Forensics
+│   ├── Phase 1: Phenotype Replication
+│   ├── Phase 2: Circuit Localization
+│   ├── Phase 3: ADT Execution
+│   └── Phase 4: DSMMD v1.0 Taxonomy
+├── 8-Week Research Roadmap
+│   └── Detailed Timeline with Deliverables
+└── Technical Considerations
+    ├── Proxy Gap Mitigation
+    └── Measurement Notes
 ```
 
 ## Customization
